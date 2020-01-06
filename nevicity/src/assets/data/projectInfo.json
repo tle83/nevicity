@@ -1,8 +1,29 @@
 [
     {
-        "name": "test"
+        "name": "Paint",
+        "status": "Complete",
+        "image": "../img/paint.png",
+        "url": "../projects/Paint/draw.html",
+        "info": "A simple painting program that will run in your browser. Gives the option to save and clear the drawing.",
+        "repo": "https://github.com/tle83/Graphics/tree/master/LeTuyet_asg2",
+        "code": ["P5", "HTML"]
     },
     {
-        "name": "test2"
+        "name": "Mimic",
+        "status": "Complete",
+        "image": "../img/mimic.png",
+        "url": "../projects/Mimic/mimic.html",
+        "info": "A game that tests your ability to recognize a musical note.\nInstructions:\n1. Play with the notes. Famliliarize yourself with each notes.\n2. Click Play Button (Labeled with \"1\").\n3. Click Record Button (Labeled with \"2\").\n5. Click Check Button (Labeled with \"3\").\n\nThis check your answers, if you are right, then click \"Play\" again\nto move onto the next set of notes.\nIf you are wrong, the try again with the Record button.",
+        "repo": "https://github.com/tle83/Mimic",
+        "code": ["P5", "HTML"]
+    },
+    {
+        "name": "Tiny Civs",
+        "status": "Incomplete",
+        "image": "../img/tinycivs.png",
+        "url": null,
+        "info": "Tiny Civs is a 2D strategic turn based card game that is played on a 6 x 6 grid field split in\nhalf horizontally. Each player designate a grid on their side of the grid board to be their Base.\nThe basic objective of the game is to destroy the opponent's Base using a custom made deck.<br /><br />\nFor this project, I had collaborated with 5 other students from my technical capstone class in LSU.\nThis project is only in it's early alpha stage which took us about 3 months to get to. ",
+        "repo": "https://github.com/tle83/EE4859_Card",
+        "code": ["Unity3D", "C#", "PHP", "phpMyAdmin", "MySQL"]
     }
 ]

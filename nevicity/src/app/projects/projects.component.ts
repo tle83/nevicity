@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Project } from '../models/data';
 
 @Component({
   selector: "app-projects",
@@ -6,10 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./projects.component.css"]
 })
 export class ProjectsComponent implements OnInit {
-  private projectData = require("../../assets/data/projectInfo.json");
+  private projectData : Project; 
   constructor() {}
 
   ngOnInit() {
+    this.projectData = require("../../assets/data/projectInfo.json");
     console.log(this.projectData);
   }
 }

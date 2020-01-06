@@ -10,6 +10,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { LinksComponent } from './links/links.component';
+import { MatCardModule} from '@angular/material';
 @NgModule({
    declarations: [
       AppComponent,
@@ -23,7 +24,8 @@ import { LinksComponent } from './links/links.component';
       AppRoutingModule,
       BrowserAnimationsModule,
       MaterialModule,
-      MatGridListModule
+      MatGridListModule,
+      MatCardModule,
    ],
    providers: [],
    bootstrap: [

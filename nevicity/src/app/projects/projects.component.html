@@ -1,3 +1,10 @@
-<p *ngFor="let project of projectData">
-  {{project.name}}
-</p>
+<mat-grid-list cols="1" rowHeight="350px">
+  <mat-grid-tile *ngFor="let project of projectData">
+    <mat-card>
+      <mat-card-header>
+        <!-- <!-- <mat-card-tile>{{ project.name }}</mat-card-tile> -->
+        <!-- <mat-card-subtile>{{project.status}}</mat-card-subtile> -->
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
