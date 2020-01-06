@@ -12,13 +12,13 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.isHomeHover = true;
+    this.isHomeHover = false;
   }
 
   mouseOver(event) {
-    // const isHomeImage = event.target.src.includes("pink-frog");
-    // if (isHomeImage == true) {
-    //   this.isHomeHover = !this.isHomeHover;
-    // }
+    const isHomeImage = event.target.src.includes("pink-frog");
+    if (isHomeImage == true) {
+      this.isHomeHover = !this.isHomeHover;
+    }
   }
 }
