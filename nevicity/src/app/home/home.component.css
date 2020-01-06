@@ -1,0 +1,25 @@
+.home {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  min-height: 500px;
+}
+
+.homeImage {
+  width: 350px;
+  height: 350px;
+}
+
+.navBtns {
+  background-color: rgb(110, 211, 207);
+  color: rgb(244, 244, 244);
+  margin: 5px;
+}
+
+.btn-group {
+  position: absolute;
+  top: 0px;
+}

@@ -1,0 +1,15 @@
+<mat-grid-list cols="1" rowHeight="400px" class="home">
+  <mat-grid-tile style="background-color: #DDBDF1">
+    <img [src]="homeImage" class="homeImage" (click)="mouseOver($event)" />
+  </mat-grid-tile>
+  <mat-grid-tile style="background-color: lightblue">
+    <div class="btn-group" role="group">
+      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">HOME</button>
+      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">ABOUT</button>
+      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">
+        PROJECTS
+      </button>
+      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">LINKS</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
