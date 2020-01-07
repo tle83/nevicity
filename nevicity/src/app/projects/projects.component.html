@@ -1,10 +1,26 @@
 <mat-grid-list cols="1" rowHeight="350px">
   <mat-grid-tile *ngFor="let project of projectData">
-    <mat-card>
+    <mat-card class="card">
       <mat-card-header>
-        <!-- <!-- <mat-card-tile>{{ project.name }}</mat-card-tile> -->
-        <!-- <mat-card-subtile>{{project.status}}</mat-card-subtile> -->
+        <mat-card-title class="name">{{ project.name }}</mat-card-title>
+        <mat-card-subtitle class="status">{{
+          project.status
+        }}</mat-card-subtitle>
       </mat-card-header>
+      <mat-card-content class="info">
+        <img [src]="getProjImage(project.image)" />
+        {{ project.info }}
+      </mat-card-content>
+      <mat-card-actions>
+        <mat-chip-list class="footer">
+          <mat-chip (click)="goToCode(project.repo)" class="code"
+            >code</mat-chip
+          >
+          <mat-chip *ngFor="let code of project.code" class="chip">
+            {{ code }}</mat-chip
+          >
+        </mat-chip-list>
+      </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

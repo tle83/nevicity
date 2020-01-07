@@ -1,0 +1,32 @@
+.card {
+  width: 80% !important;
+  margin-left: 100px;
+  background-color: rgb(53, 53, 53);
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.name {
+  color: rgb(110, 211, 207);
+}
+.status {
+  color: rgb(110, 211, 207);
+}
+.info {
+  color: rgb(255, 255, 255);
+}
+.footer {
+  margin-left: 10px;
+}
+.code {
+  box-sizing: border-box;
+  background-color: rgb(110, 211, 207);
+  color: rgb(255, 255, 255);
+}
+
+.chip {
+  background-color: rgb(53, 53, 53);
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
+}
