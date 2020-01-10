@@ -6,20 +6,27 @@
   bottom: 0px;
   margin: auto;
   min-height: 500px;
-  background-color: rgb(49, 44, 50);
 }
 
-.homeImage {
+.home-image {
   width: 350px;
   height: 350px;
   position: absolute;
   bottom: 0px;
-} 
+}
 
-.navBtns {
-  background-color: rgb(110, 211, 207);
-  color: rgb(255, 255, 255);
+.home-image:hover {
+  cursor: pointer;
+}
+
+.nav-btns {
+  background-color: #6ed3cf;
+  color: #ffffff;
   margin: 5px;
+}
+
+.nav-btns:hover {
+  background-color: #f1556e;
 }
 
 .btn-group {
@@ -28,7 +35,7 @@
 }
 
 .copyright {
-    position: absolute;
-    bottom: 30px;
-    color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 30px;
+  color: #ffffff;
 }

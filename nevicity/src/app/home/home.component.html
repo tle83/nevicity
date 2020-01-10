@@ -1,15 +1,15 @@
 <mat-grid-list cols="1" rowHeight="fit" class="home">
   <mat-grid-tile>
-    <img [src]="homeImage" class="homeImage" (click)="mouseOver($event)" />
+    <img [src]="homeImage" class="home-image" (click)="mouseOver($event)" />
   </mat-grid-tile>
   <mat-grid-tile>
     <div class="btn-group" role="group">
-      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">HOME</button>
-      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">ABOUT</button>
-      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">
+      <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('home')">HOME</button>
+      <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('about')">ABOUT</button>
+      <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('projects')">
         PROJECTS
       </button>
-      <button mat-flat-button class="navBtns" *ngIf="isHomeHover">LINKS</button>
+      <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('links')">LINKS</button>
     </div>
     <div class="copyright">
       &copy; 2020 Tuyet Le

@@ -1,0 +1,54 @@
+.card {
+  width: 80% !important;
+  margin-left: 100px;
+  background-color: #353535;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+}
+
+.name {
+  color: #6ed3cf;
+}
+
+.name:hover {
+  cursor: pointer;
+  color: #f1556e;
+}
+
+.status {
+  color: #daad86;
+}
+
+.proj-image {
+  width: 250px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid #98dafc;
+  border-radius: 10px;
+}
+
+.description {
+  color: #98dafc;
+  font-size: 14px;
+}
+
+.footer {
+  margin-left: 10px;
+}
+
+.code {
+  box-sizing: border-box;
+  background-color: #6ed3cf;
+  color: rgb(255, 255, 255);
+}
+
+.code:hover {
+  cursor: pointer;
+}
+
+.chip {
+  background-color: #353535;
+  color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+}
