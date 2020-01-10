@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Project } from "../models/data.js";
+import projects from "../../assets/data/projectInfo.json";
+import { MatDialog } from "@angular/material";
+import { template } from "@angular/core/src/render3";
 
 @Component({
   selector: "app-projects",
@@ -8,19 +11,25 @@ import { Project } from "../models/data.js";
 })
 export class ProjectsComponent implements OnInit {
   private projectData: Project[];
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit() {
-    this.projectData = require("../../assets/data/projectInfo.json");
-    console.log(this.projectData);
+    this.projectData = projects;
   }
 
-  goToCode(repo) {
-    console.log(repo);
+  goToCode(repoURL) {
+    if (/^http[s]?:\/\//.test(repoURL)) {
+      window.open(repoURL, "_blank");
+    } else {
+      repoURL = `https://${repoURL}`;
+      window.open(repoURL, "_blank");
+    }
   }
 
-  getProjImage(imgURL) {
-    console.log(imgURL, typeof imgURL);
-    return require(imgURL);
+  openPopup(template) {
+    this.dialog.open(template, {
+      width: "90%",
+      height: "90%"
+    });
   }
 }

@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  private homeImage = require("../../assets/img/pink-frog.gif");
+  private homeImage = "../../assets/img/pink-frog.gif";
   isHomeHover: boolean;
 
   constructor(private router: Router) {}
