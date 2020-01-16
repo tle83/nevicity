@@ -5,11 +5,15 @@
   <mat-grid-tile>
     <div class="btn-group" role="group">
       <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('home')">HOME</button>
-      <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('about')">ABOUT</button>
       <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('projects')">
         PROJECTS
       </button>
       <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('links')">LINKS</button>
+    </div>
+    <div class="about" *ngIf="isFrogClicked">
+      <span>{{title[0]}}</span><span class="highlight">{{title[1]}}</span><span>{{title[2]}}</span>
+      <br> <br>
+      <span>{{description[0]}}</span><span class="highlight">{{description[1]}}</span><span>{{description[2]}}</span>
     </div>
     <div class="copyright">
       &copy; 2020 Tuyet Le

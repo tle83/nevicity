@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { Project } from "../models/data.js";
 import projects from "../../assets/data/projectInfo.json";
 import { MatDialog } from "@angular/material";
-import { template } from "@angular/core/src/render3";
 
 @Component({
   selector: "app-projects",
