@@ -7,15 +7,13 @@ import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material";
 import { ProjectsComponent } from "./projects/projects.component";
-import { AboutComponent } from "./about/about.component";
 import { LinksComponent } from "./links/links.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectsComponent,
-    AboutComponent,
+    ProjectsComponent, 
     LinksComponent
   ],
   imports: [

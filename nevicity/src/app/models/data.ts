@@ -7,3 +7,8 @@ export class Project {
     repo: string;
     code: Array<string>;
 }
+
+export class About {
+    title: string; 
+    description: string;
+}
