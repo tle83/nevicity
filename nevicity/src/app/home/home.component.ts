@@ -15,43 +15,63 @@ export class HomeComponent implements OnInit {
   isHomeHover: boolean;
   title = [];
   description = [];
+  isNavClicked: boolean;
+  homePanel = ["1", "2"];
+  tilePanel = ["1", "2", "4"];
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.isFrogClicked = true;
+    this.isFrogClicked = false;
     this.isHomeHover = false;
     this.aboutData = about;
+    this.isNavClicked = false;
 
-    this.title = this.aboutData.title.split('*');
-    this.description = this.aboutData.description.split('*');
-    console.log(this.title, '\n', this.description);
+    this.title = this.aboutData.title.split("*");
+    this.description = this.aboutData.description.split("*");
+    console.log(this.title, "\n", this.description);
   }
 
   mouseOver(event) {
     const isHomeImage = event.target.src.includes("pink-frog");
     if (isHomeImage == true) {
+      // this.isNavClicked = !this.isNavClicked;
       this.isFrogClicked = !this.isFrogClicked;
       this.isHomeHover = !this.isHomeHover;
     }
+    if (this.isNavClicked === true) {
+      this.isNavClicked = false;
+    }
+    console.log(
+      `isFrogClicked: ${this.isFrogClicked}\nisHomeHover: ${this.isHomeHover}\nisNavClicked: ${this.isNavClicked}`
+    );
   }
 
   navigateTo(location) {
     console.log("GO TO: ", location);
     switch (location) {
       case "home":
-        this.router.navigate(["/home"]);
+        this.isNavClicked = false;
+        this.isFrogClicked = !this.isFrogClicked;
+        this.isHomeHover = false;
+        // this.router.navigate(["/home"]);
         break;
       case "projects":
-        this.router.navigate(["/projects"]);
+        this.isNavClicked = true;
+        // this.router.navigate(["/projects"]);
         break;
       case "about":
-        this.router.navigate(["/about"]);
+        this.isNavClicked = true;
+        // this.router.navigate(["/about"]);
         break;
       case "links":
-        this.router.navigate(["/links"]);
+        this.isNavClicked = true;
+        // this.router.navigate(["/links"]);
         break;
       default:
         break;
     }
+    console.log(
+      `isFrogClicked: ${this.isFrogClicked}\nisHomeHover: ${this.isHomeHover}\nisNavClicked: ${this.isNavClicked}`
+    );
   }
 }

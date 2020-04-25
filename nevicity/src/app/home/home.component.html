@@ -1,8 +1,17 @@
-<mat-grid-list cols="1" rowHeight="fit" class="home">
-  <mat-grid-tile>
+<mat-grid-list [cols]="isFrogClicked && isNavClicked ? 1 : 2" rowHeight="fit" class="home">
+  <mat-grid-tile [colspan]="isFrogClicked && isNavClicked ? 1 : 2" 
+  [rowspan]="isFrogClicked && isNavClicked ? 2 : 1">
     <img [src]="homeImage" class="home-image" (click)="mouseOver($event)" />
   </mat-grid-tile>
-  <mat-grid-tile>
+
+  <mat-grid-tile *ngIf="isNavClicked" 
+  [colspan]="isNavClicked ? 1 : 1" 
+  [rowspan]="isNavClicked ? 1 : 4">
+    test
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="isFrogClicked && isNavClicked ? 1 : 2" 
+  [rowspan]="isFrogClicked && isNavClicked ? 2 : 1">
     <div class="btn-group" role="group">
       <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('home')">HOME</button>
       <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('projects')">
@@ -10,7 +19,7 @@
       </button>
       <button mat-flat-button class="nav-btns" *ngIf="isHomeHover" (click)="navigateTo('links')">LINKS</button>
     </div>
-    <div class="about" *ngIf="isFrogClicked">
+    <div class="about" *ngIf="!isFrogClicked">
       <span>{{title[0]}}</span><span class="highlight">{{title[1]}}</span><span>{{title[2]}}</span>
       <br> <br>
       <span>{{description[0]}}</span><span class="highlight">{{description[1]}}</span><span>{{description[2]}}</span>
